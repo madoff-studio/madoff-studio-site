@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Демо: мини-CRM для салона — MADOFF studio</title>
+  <link rel="icon" href="../../img/brand/madoff-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="crm.css">
+</head>
+<body class="app">
+
+<div class="demo-bar">
+  <a href="../../cases/crm-salon.html">← К описанию кейса</a>
+  <span>Демо MADOFF studio · данные хранятся только в вашем браузере и никуда не отправляются</span>
+</div>
+
+<div class="crm">
+  <aside class="crm__side">
+    <div class="crm__brand"><span class="crm__logo">Л</span><div><b>Салон «Лаванда»</b><small>вымышленный салон</small></div></div>
+    <nav class="crm__nav">
+      <span class="on">Записи</span><span>Клиенты</span><span>Услуги</span><span>Отчёты</span>
+    </nav>
+    <button class="crm__reset" id="reset" type="button">Сбросить демо</button>
+  </aside>
+
+  <main class="crm__main">
+    <header class="crm__head">
+      <div>
+        <h1 id="day-title">Записи на сегодня</h1>
+        <div class="days" id="days"></div>
+      </div>
+      <button class="btn btn--blue" id="add-open" type="button">+ Новая запись</button>
+    </header>
+
+    <section class="stats" id="stats"></section>
+
+    <div class="tools">
+      <input class="field" id="search" type="search" placeholder="Поиск по клиенту или услуге" aria-label="Поиск">
+      <div class="filters" id="filters"></div>
+    </div>
+
+    <div class="list" id="list"></div>
+  </main>
+</div>
+
+<dialog class="modal" id="modal">
+  <form method="dialog" id="form">
+    <h2>Новая запись</h2>
+    <label>Клиент<input class="field" name="client" required maxlength="40" placeholder="Например, Анна"></label>
+    <label>Услуга<select class="field" name="service" id="service"></select></label>
+    <div class="row">
+      <label>Время<input class="field" name="time" type="time" required value="12:00"></label>
+      <label>Мастер<select class="field" name="master"><option>Ольга</option><option>Ирина</option><option>Марат</option></select></label>
+    </div>
+    <p class="hint">Это демо: имя сохранится только в вашем браузере. Не вводите настоящие данные.</p>
+    <div class="modal__btns">
+      <button class="btn btn--ghost" value="cancel" type="button" id="cancel">Отмена</button>
+      <button class="btn btn--blue" value="ok" type="submit">Добавить</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="crm.js"></script>
+</body>
+</html>

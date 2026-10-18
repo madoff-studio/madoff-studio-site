@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Демо: ИИ-ассистент салона — MADOFF studio</title>
+  <link rel="icon" href="../../img/brand/madoff-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="assistant.css">
+</head>
+<body class="app">
+
+<div class="demo-bar">
+  <a href="../../cases/ai-assistant.html">← К описанию кейса</a>
+  <span>Демо-сценарий MADOFF studio · ответы подготовлены заранее, сообщения никуда не отправляются</span>
+</div>
+
+<div class="as">
+  <section class="as__info">
+    <span class="pill tag-demo">демо</span>
+    <h1>ИИ-ассистент салона «Лаванда»</h1>
+    <p>Спросите о ценах, адресе или времени работы — или запишитесь на услугу. Так ассистент отвечает клиентам ночью и в выходные, пока администратор отдыхает.</p>
+    <ul class="ticks">
+      <li>Отвечает за секунды, круглосуточно</li>
+      <li>Ведёт клиента до записи</li>
+      <li>Сложные вопросы передаёт человеку</li>
+    </ul>
+    <p class="as__note">В демо ответы заранее подготовлены. В реальном проекте подключается языковая модель и база знаний вашего бизнеса.</p>
+  </section>
+
+  <section class="chatbox" aria-label="Чат с ассистентом">
+    <header class="chatbox__head"><span class="chatbox__ava">Л</span><div><b>Лаванда · ассистент</b><small><i></i>онлайн</small></div></header>
+    <div class="chatbox__log" id="log" aria-live="polite"></div>
+    <div class="chatbox__chips" id="chips"></div>
+    <form class="chatbox__form" id="form">
+      <input id="input" class="field" autocomplete="off" maxlength="200" placeholder="Напишите вопрос…" aria-label="Сообщение">
+      <button class="btn btn--blue" type="submit" aria-label="Отправить">→</button>
+    </form>
+  </section>
+</div>
+
+<script src="assistant.js"></script>
+</body>
+</html>
